@@ -21,5 +21,23 @@ for (i = 0; i < numbers.length; i++) {
 }
 
 numbersWithIva.forEach((numberWithIva) => {
-  console.log(`El precio es: ${numberWithIva}.- IVA incluido.`);
+  console.log(`El precio es: ${numberWithIva} - IVA incluido.`);
 });
+
+/**
+ * Tambien se puede hacer con la funcion MAP
+ * Lo que hacer esta funcion es llamar a una funcion de callback y
+ * pasarle como parametro cada valor de cada index del array y devolver un nuevo array
+ *
+ * La funcion de callback dentro es lo mismo que declarar una funcion aparte asi
+ *
+ * function calcular(item){
+ *  return item*1.21;
+ * };
+ *
+ * preciosConIva = numbers.map(calcular);
+ * console.log(preciosConIva);
+ */
+
+preciosConIva = numbers.map((number) => number * 1.21);
+console.log(preciosConIva);
